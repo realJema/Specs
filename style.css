@@ -1,0 +1,24 @@
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+    background: transparent;        /* most important */
+}
+
+.main {
+    text-align: center;
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 7em;
+    font-family: arial;
+    letter-spacing: 5px;
+    word-spacing: 40px;
+    text-shadow: -15px 5px 20px #ced0d3;
+    /* color: white; */
+    font-weight: bold;
+}
