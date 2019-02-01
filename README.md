@@ -20,7 +20,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/realjema/electron-frameless-quick-start
+git clone https://github.com/realJema/Electron-Frameless.git
 # Go into the repository
 cd electron-frameless-quick-start
 # Install dependencies
