@@ -1,45 +1,105 @@
-# electron-frameless-quick-start
+# Jarvis 
+J.A.R.V.I.S. (Just A Rather Very Intelligent System)
+A software assitant to help me automate tasks
 
-**Clone and run for a quick way to see Electron in action.**
-
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
-
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
-
-## To Use
-
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/realJema/Electron-Frameless.git
-# Go into the repository
-cd electron-frameless-quick-start
-# Install dependencies
+## Installation 
+### Run the frontend
+install dependencies  
+`
 npm install
-# Run the app
-npm start
+`  
+start up program  
+`
+npm start 
+`
+
+### Run the backend api 
+install requirements  
+`
+pip install -r requirements.txt
+`
+```
+cd backend
+python server.py   
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+## Frontend 
+**React + Electron**. 
 
-## Resources for Learning Electron
+## Backend 
+Python Flask Api
+#### Structure
+`Server.py`
+Api file which communicates with the frontend. It receives the input from the user and passes it to the python script which is in charge of executing it, then returns the string results to the frontend
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-frameless-quick-start](https://github.com/electron/electron-frameless-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+`main.py`
+This is the main deciding script of the backend. It identifies the instruction and decides on which script to call to execute it. This identification is based on the instructions in the `command_list.py` file by matching in which category the instruction falls in.
 
-## License
+`scripts/command_list.py`
+contains all the instructions that can be processed categorized according to the scripts which execute them.
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+`scripts/media_commands`
+`scripts/sys_commands`
+
+## Philosophy 
+This app is built to run on every computer systems as much as possible.
+
+## Commands 
+### Chats 
+```
+'hi'                    --> 'hello',
+'hello'                 --> 'hi',
+'hey'                   --> 'Yes sir! am listening',
+'how are you'           --> 'I am fine, thank you!',
+'what is your name'     -->: 'My name is JARVIS, meaning Just A Rather Very Intelligent System. My goal is to assist you in your daily tasks',
+'how old are you'       --> 'I am, less than one month old',
+'goodmorning'           --> 'Goodmoring Sir!, how are you doing today?',
+'am good'               --> 'That\'s good to hear!',
+'am good'               --> 'That\'s good to hear!',
+'am good'               --> 'That\'s good to hear!',
+```
+
+### System commands 
+say this: 
+    .. shutdown ...
+    .. restart ...
+    .. hibernate ...
+    .. cancel ...
+    .. logoff ...
+    .. cancel shutdown ...
+advanced command (this adds a delay to the above commands)
+    .. [say this] in [x] minutes 
+
+## File Stucture
+```
+-- public/
+    --favicon
+-- src/
+    -- backend/
+        -- server.js
+        -- main.py
+        -- scripts/
+    -- images/
+    -- App.js
+    -- App.css
+    -- index.js
+    -- index.css
+    -- instruction.js
+```
+## To-Do
+[x] update UI
+[x] reset input to placeholder 
+[x] ui design for assistant 
+[] importing local scripts 
+[] close, open animations
+[] updating commands backend
+[] image of jarvis 
+[] speech recognition and reporting 
+[] Animations  
+[] Move to edge of screen
+[] loading animation 
+[] Backend instructions standardization  
+[] Backend documentation  
+[] Add website launching   
+[] Add calculator   
+[] 
