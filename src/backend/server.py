@@ -6,9 +6,17 @@ app = flask.Flask(__name__)
 CORS(app)
 app.config["DEBUG"] = True
 
+def getDetails():
+    import specs
+    return specs.execute()
+
 @app.route('/specs/api', methods=['GET'])
 def home():
     return 'Welcome! I am specs!'
+
+@app.route('/specs/api/data', methods=['GET'])
+def fetch_data():
+    return getDetails(), 200
 
 @app.errorhandler(404)
 def page_not_found(e):
