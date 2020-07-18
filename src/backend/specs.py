@@ -27,7 +27,7 @@ def get_size(bytes, suffix="B"):
 
 def execute(): 
     uname = platform.uname()
-    data['System_information'] = {"System": uname.system, "Node Name": uname.node, "Release": uname.release, "Version": uname.version, "Machine": uname.machine, "Processor": uname.processor}
+    data['System_information'] = {"System": uname.system, "Node_name": uname.node, "Release": uname.release, "Version": uname.version, "Machine": uname.machine, "Processor": uname.processor}
 
     # Boot Time
     boot_time_timestamp = psutil.boot_time()

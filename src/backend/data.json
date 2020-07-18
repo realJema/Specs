@@ -1,0 +1,50 @@
+{
+  "System_information": {
+    "System": "Windows",
+    "Node_name": "DESKTOP8GPF67H",
+    "Release": "10",
+    "Version": "10.0.18362",
+    "Machine": "AMD64",
+    "Processor": "Intel64 Family 6 Model 42 Stepping 7, GenuineIntel"
+  },
+  "Up_time": {
+    "year": 2020,
+    "month": 7,
+    "day": 17,
+    "hour": 6,
+    "minute": 7,
+    "seconds": 42
+  },
+  "CPU_info": {
+    "Physical_cores": 4,
+    "Total_cores": 8,
+    "cpufreq": [2100.0, 0.0, 2201.0],
+    "Max_Frequency": 2201.0,
+    "Min_Frequency": 0.0,
+    "Current_Frequency": 2100.0,
+    "Usage": { "Total": 0.0 }
+  },
+  "Ram": {
+    "Total": "11.88GB",
+    "Available": "4.52GB",
+    "Used": "7.36GB",
+    "Percentage": 61.9
+  },
+  "Ram_swap": {
+    "Total": "13.70GB",
+    "Free": "3.64GB",
+    "Used": "10.06GB",
+    "Percentage": 73.5
+  },
+  "Partitions": [
+    {
+      "name": "C:\\",
+      "mnt_pt": "C:\\",
+      "sys_type": "NTFS",
+      "Total_Size": "465.22GB",
+      "Used": "415.89GB",
+      "Free": "49.33GB",
+      "Percentage": 89.4
+    }
+  ]
+}

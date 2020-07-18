@@ -8,7 +8,12 @@ app.config["DEBUG"] = True
 
 def getDetails():
     import specs
-    return specs.execute()
+    data = specs.execute()
+
+    import json 
+    # with open('data.json', 'w') as outfile:
+    #     json.dump(data, outfile)
+    return True  
 
 @app.route('/specs/api', methods=['GET'])
 def home():

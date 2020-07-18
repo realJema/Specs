@@ -5,3 +5,22 @@
 .info_cards {
     margin-bottom: 10px;
 }
+
+.header {
+    padding: 2%;
+}
+
+.info_container {
+    background: rgb(240, 240, 240);
+}
+
+.card-img {
+    height: 70px !important;
+    width: 70px !important;
+    margin-right: 24px;
+    margin-top: 13px;
+}
+.images {
+    float: right;
+    display: contents;
+}
