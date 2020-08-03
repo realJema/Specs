@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import axios from "axios";
+import axios from "axios";
 import "./App.css";
 import { Card, Row, Col, Tabs, Tab, ProgressBar, CardImg} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,17 +16,17 @@ class App extends Component {
 
   // communication with the python backend to execute commands
   componentDidMount() {
-    // var url = "http://127.0.0.1:5000/specs/api/data";
-    // axios
-    //   .get(url)
-    //   .then((res) => {
-    //   })
-    //   .catch((error) => {
-    //     console.log("Sorry! server is down", "bot_chat");
-    //     this.setState({
-    //       error: true,
-    //     })
-    //   });
+    var url = "http://127.0.0.1:5000/specs/api/data";
+    axios
+      .get(url)
+      .then((res) => {
+      })
+      .catch((error) => {
+        console.log("Sorry! server is down", "bot_chat");
+        this.setState({
+          error: true,
+        })
+      });
   }
 
   render() {

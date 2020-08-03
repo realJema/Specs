@@ -7,7 +7,21 @@ let mainWindow;
 function createWindow() {
     let display = electron.screen.getPrimaryDisplay();
     let screen_width = display.bounds.width;
-    let screen_height = display.bounds.height;
+  let screen_height = display.bounds.height;
+  
+   // run backend script api executable 
+    var executablepath = 'specs.exe';
+    var child = require('child_process').exec;
+
+    child(executablepath, function (err, data) {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log(data.toString());
+    });
+
+  
     mainWindow = new BrowserWindow({
       width: 700,
       height: 700,
@@ -32,6 +46,16 @@ app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
     app.quit();
     }
+    
+    // kill backend script api 
+    var child = require("child_process").exec;
+     child("taskkill /F /IM specs.exe", function (err, data) {
+       if (err) {
+         console.error(err);
+         return;
+       }
+       console.log('backend script ended');
+     });
 });
 
 app.on("activate", () => {
